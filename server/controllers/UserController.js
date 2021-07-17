@@ -50,6 +50,9 @@ const signUp = async (req, res) => {
 
 const logIn = async (req, res) => {
 
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+
   const {email, password} = req.body;
 
   const userExist = await User.find({email}).exec();
