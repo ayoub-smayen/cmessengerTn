@@ -4,7 +4,9 @@
   "description": "Backend of the chat application",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false"
+     
     
   },
   "author": "Ayoub smayen",
