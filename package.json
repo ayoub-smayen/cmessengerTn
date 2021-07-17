@@ -4,7 +4,7 @@
   "description": "Backend of the chat application",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
+    "start": "node index.js"
     "
   },
   "author": "Ayoub smayen",
