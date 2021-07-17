@@ -408,6 +408,8 @@ const port = process.env.PORT || 5000;
 
 app.use(express.static('build'));
    app.get('*', (req, res) => {
+     res.header("Access-Control-Allow-Origin", "*");
+      res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
      res.sendFile(path.resolve(__dirname,  'build', 'index.html'));
    })
 //process.env.DB_URL
@@ -419,5 +421,7 @@ mongoose.connect("mongodb+srv://ayoub:7LchjMQ9ENeSbwcw@cluster0.fgqdy.mongodb.ne
   useCreateIndex: true
 })
 .then(res => {
+   res.header("Access-Control-Allow-Origin", "*");
+   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
   server.listen(port);
 });
